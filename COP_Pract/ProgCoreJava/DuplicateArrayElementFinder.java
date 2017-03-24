@@ -2,9 +2,18 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 public class DuplicateArrayElementFinder{
-	public static void main(String[] args){		
-		int[] intArray = {24,24,6,3,6,8,3,2,6,6,856,3};
+	public static void main(String[] args){	
+		List<Integer> intList = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter 6 integers");
+		int[] intArray = new int[6];
+		for(int i=0;i<intArray.length;i++){
+			intArray[i] = sc.nextInt();
+		}
+		System.out.println("Entered integers in array: " +intArray);
 		Map<Integer,Integer> dupMap = new HashMap<>();
 		for(int i=0;i<intArray.length;i++){
 			if (!dupMap.containsKey(intArray[i])){
